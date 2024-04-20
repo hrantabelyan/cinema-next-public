@@ -1,0 +1,101 @@
+.roomsWrapper {
+  padding: 48px;
+}
+
+.roomsContainer {
+  max-width: 1526px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.roomBadgeContainer {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  cursor: pointer;
+}
+
+.color,
+.movie {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nameAndSeats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seat {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: orange;
+}
+
+.reservedSeats {
+  background-color: red;
+}
+
+.seatColumns {
+  display: flex;
+  gap: 12px;
+}
+
+.seatsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reserveContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.textInput {
+  outline: none;
+  font-family: "SF-Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  padding: 16px;
+  border: 1px solid #D6D6D6;
+  width: 100%;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
