@@ -15,17 +15,18 @@ const Room = () => {
     const router = useRouter();
     const {id} = router.query;
     const [movies, setMovies] = useState<IMovie[]>([])
-    
+    console.log(movies);
+    console.log(router.query);
+
     useEffect(() => {
-        console.log(typeof id)
-        if(typeof id === 'string') {
+        console.log(id);
+        if (typeof id === 'string') {
             getMovies(id)
             .then(res => {
                 setMovies([...res])
             })
         }
-    }, []);
-    
+    }, [id]);
 
     return (
         <div className={styles.roomsWrapper}>
