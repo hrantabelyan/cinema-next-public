@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
 import styles from '@/styles/rooms.module.scss';
-import MovieBadge from "@/components/movies/movieBadge";
+import MovieBadge from '@/components/movies/movieBadge';
 import { getMovies } from '@/pages/api/getMovies';
 
 export interface IMovie {
@@ -14,17 +14,14 @@ export interface IMovie {
 const Room = () => {
     const router = useRouter();
     const {id} = router.query;
-    const [movies, setMovies] = useState<IMovie[]>([])
-    console.log(movies);
-    console.log(router.query);
+    const [movies, setMovies] = useState<IMovie[]>([]);
 
     useEffect(() => {
-        console.log(id);
         if (typeof id === 'string') {
             getMovies(id)
             .then(res => {
-                setMovies([...res])
-            })
+                setMovies([...res]);
+            });
         }
     }, [id]);
 

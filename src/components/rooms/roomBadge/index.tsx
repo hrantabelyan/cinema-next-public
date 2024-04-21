@@ -15,8 +15,8 @@ const RoomBadge = ({id, color, name, numberOfSeats}: IRoomBadge) => {
     const router = useRouter();
 
     const handleRedirectToRoom = () => {
-        router.push(`/rooms/${id}`)
-    }
+        router.push(`/rooms/${id}`);
+    };
     
     return (
         <div 

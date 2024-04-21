@@ -6,16 +6,21 @@ interface SeatProps {
     id: number;
     selected: boolean;
     onSelect: (id: number) => void;
+    reserved: boolean
 }
 
-const Seat: React.FC<SeatProps> = ({ id, selected, onSelect }) => {
+const Seat: React.FC<SeatProps> = ({ id, selected, onSelect, reserved }) => {
     const handleClick = () => {
         onSelect(id);
     };
 
     return (
         <div
-            className={`${styles.seat} ${selected ? styles.selected : ''}`}
+            className={`
+            ${styles.seat}
+            ${selected ? styles.selected : ''}
+            ${reserved ? styles.reserved : ''}
+            `}
             onClick={handleClick}
         >
             {id}

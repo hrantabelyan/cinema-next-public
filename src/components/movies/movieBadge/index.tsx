@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from "@/styles/rooms.module.scss";
-import {useRouter} from "next/router";
+import styles from '@/styles/rooms.module.scss';
+import {useRouter} from 'next/router';
 
 interface IMovieBadge {
     id: string,
@@ -13,7 +13,7 @@ const MovieBadge = ({id, name, image, time}: IMovieBadge) => {
     const router = useRouter();
 
     const handleRedirectToRoom = () => {
-        router.push(`/movies/${id}`)
+        router.push(`/screenings/${id}`);
     };
 
     return (

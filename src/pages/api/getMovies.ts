@@ -17,7 +17,7 @@ export const getMovies = async (id: string) => {
                     name: item.movie.name,
                     image: item.movie.image_path,
                     time: item.start_at
-                }
+                };
         });
     } catch (error) {
 

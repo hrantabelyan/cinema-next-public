@@ -17,9 +17,8 @@ const Rooms = () => {
     useEffect(() => {
         getRooms()
         .then(res => {
-            // console.log(res)
-            setRooms([...res])
-        })
+            setRooms([...res]);
+        });
     }, []);
 
     return (
